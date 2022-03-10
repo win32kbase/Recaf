@@ -100,7 +100,9 @@ public class FieldContextBuilder extends MemberContextBuilder {
 				AssemblerPane assembler = new AssemblerPane();
 				assembler.setTargetMember(fieldInfo);
 				assembler.onUpdate(ownerInfo);
-				new GenericWindow(assembler, 800, 300).show();
+				GenericWindow assemblerWindow = new GenericWindow(assembler, 800, 300);
+				assemblerWindow.titleProperty().bind(Lang.getBinding("menu.edit.assemble.field"));
+				assemblerWindow.show();
 			} else if (ownerInfo instanceof DexClassInfo) {
 				// TODO: Copy dex member
 				logger.warn("Android currently unsupported");

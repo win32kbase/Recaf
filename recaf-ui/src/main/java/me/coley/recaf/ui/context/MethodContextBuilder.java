@@ -100,7 +100,9 @@ public class MethodContextBuilder extends MemberContextBuilder {
 				AssemblerPane assembler = new AssemblerPane();
 				assembler.setTargetMember(methodInfo);
 				assembler.onUpdate(ownerInfo);
-				new GenericWindow(assembler, 800, 600).show();
+				GenericWindow assemblerWindow = new GenericWindow(assembler, 800, 600);
+				assemblerWindow.titleProperty().bind(Lang.getBinding("menu.edit.assemble.method"));
+				assemblerWindow.show();
 			} else if (ownerInfo instanceof DexClassInfo) {
 				// TODO: Copy dex member
 				logger.warn("Android currently unsupported");
