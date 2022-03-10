@@ -70,9 +70,6 @@ public class AssemblerPane extends BorderPane implements MemberEditor, Cleanable
 		stack.getChildren().add(layoutWrapper);
 		stack.getChildren().add(errorDisplay);
 
-		// Setup bottom tabs with bytecode helper tools
-		//CollapsibleTabPane sideTabs = new CollapsibleTabPane();
-
 		// Put tabs on bottom via split-view
 		split.setOrientation(Orientation.VERTICAL);
 		split.getItems().addAll(stack);
