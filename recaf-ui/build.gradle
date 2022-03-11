@@ -21,6 +21,8 @@ dependencies {
     implementation 'com.github.Col-E:fxgraph:0.0.4'
     implementation pe
     implementation jelf
+    implementation beanshell
+    // We compile against JFX but do not bundle. The launcher will download the platform specific implementation for end users.
     def javafxPlatform = getJavaFxPlatform()
     compileOnly group: 'org.openjfx', name: 'javafx-base', version: '17.0.2', classifier: javafxPlatform
     compileOnly group: 'org.openjfx', name: 'javafx-graphics', version: '17.0.2', classifier: javafxPlatform
